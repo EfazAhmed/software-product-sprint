@@ -1,9 +1,44 @@
 #content {
   margin-left: auto;
   margin-right: auto;
-  width: 650px;
+  width: 800px;
+  text-align: center;
+  background: white;
 }
 
 #greeting-container {
   margin-top: 20px;
 }
+
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: #4285F4;
+    height: 100px;
+}
+
+h1 {
+    font-family: 'IBM Plex Sans';
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+#profile-img {
+    border-radius: 50%;
+    border: solid 0px #4285F4;
+    width: 250px;
+    margin: 75px 0px;
+    box-shadow:0px 0px 0px 10px #4285F4 inset;
+}
+
+#profile-img:hover {
+    border-radius: 50%;
+    border: solid 15px #4285F4;
+    transition: 0.3s;
+}
+
+
