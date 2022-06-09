@@ -1,26 +1,84 @@
+body::-webkit-scrollbar {
+    display: none;
+  }
+
 #content {
-  margin-left: auto;
-  margin-right: auto;
-  width: 800px;
-  text-align: center;
-  background: white;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    min-width: 800px;
+    text-align: center;
+    background: white;
+    font-family: 'IBM Plex Sans';;
 }
-
-#greeting-container {
-  margin-top: 20px;
-}
-
-
 .header {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
+    min-width: 800px;
     background: #4285F4;
     height: 100px;
+    font-size: 25px;
+    position: relative;
 }
-
-h1 {
+.header #journey {
+    font-size: 10px;
+    position: absolute;
+    left: 8%;
+    text-decoration: None;
+}
+.header #journey h1 {
+    color: white;
+    transition: 0.2s;
+}
+.header #journey h1:hover {
+    color: #F4B400;
+    transition: 0.2s;
+}
+.header #projects {
+    font-size: 10px;
+    position: absolute;
+    left: 20%;
+    text-decoration: None;
+}
+.header #projects h1 {
+    color: white;
+    transition: 0.2s;
+}
+.header #projects h1:hover {
+    color: #F4B400;
+    transition: 0.2s;
+}
+.header #experience {
+    font-size: 10px;
+    position: absolute;
+    right: 17%;
+    text-decoration: None;
+}
+.header #experience h1 {
+    color: white;
+    transition: 0.2s;
+}
+.header #experience h1:hover {
+    color: #F4B400;
+    transition: 0.2s;
+}
+.header #socials {
+    font-size: 10px;
+    position: absolute;
+    right: 5%;
+    text-decoration: None;
+}
+.header #socials h1 {
+    color: white;
+    transition: 0.2s;
+}
+.header #socials h1:hover {
+    color: #F4B400;
+    transition: 0.2s;
+}
+.header h1 {
     font-family: 'IBM Plex Sans';
     text-align: center;
     color: white;
@@ -31,14 +89,169 @@ h1 {
     border-radius: 50%;
     border: solid 0px #4285F4;
     width: 250px;
-    margin: 75px 0px;
+    margin-top: 75px;
+    margin-bottom: 30px;
     box-shadow:0px 0px 0px 10px #4285F4 inset;
+    transition: 0.2s;
 }
-
 #profile-img:hover {
     border-radius: 50%;
     border: solid 15px #4285F4;
     transition: 0.3s;
 }
+#introduction-message {
+    font-family: 'IBM Plex Sans';
+    font-size: 20px;
+    font-weight: bold;
+    min-width: 200px;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 75px;
+    color: #4285F4;
+}
 
+#journey-section {
+    margin-top: 50px;
+    background-color: white;
+}
+#journey-section .journey-header {
+    background-color: #F4B400;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100px;
+    font-size: 20px;
+}
+#journey-section h3{
+    color: #F4B400;
+    margin: 30px 0px;
+    font-size: 20px
+}
+#journey-section p {
+    color: black;
+    font-size: 16px;
+    min-width: 200px;
+    margin-left: 200px;
+    margin-right: 200px;
+}
 
+#projects-section {
+    margin-top: 50px;
+    background-color: white;
+}
+#projects-section .projects-header {
+    background-color: #DB4437;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100px;
+    font-size: 20px;
+    position: relative;
+}
+.projects-container {
+    position: relative;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+.project-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: 0.1s;
+}
+.project-card:hover {
+    background-color: #DB4437;
+    color:white;
+    transition: 0.3s;
+}
+.project-card:hover .project-title{
+    color:white;
+    transition: 0.2s;
+}
+.project-title {
+   color: #DB4437;
+}
+.project-card p {
+    width: 250px;
+    margin: 0px;
+    margin-bottom: 25px;
+}
+
+#socials-section {
+    margin-top: 50px;
+    background-color: white;
+}
+#socials-section .socials-header {
+    background-color: #0F9D58;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 20px;
+    position: relative;
+}
+.socials-container {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.linkedin-card {
+    background-color: #0077B5;
+    font-size: 15px;
+    transition: 0.2s;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 15px;
+}
+.linkedin-card:hover {
+    background-color: #0F9D58;
+}
+.linkedin-card a {
+    text-decoration: None;
+}
+.linkedin-card a h1 {
+    color: white;
+    width: 100%;
+    height: 100%;
+}
+.github-card {
+    background-color: black;
+    font-size: 15px;
+    transition: 0.2s;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 15px;
+}
+.github-card:hover {
+    background-color: #0F9D58;
+}
+.github-card a {
+    text-decoration: None;
+}
+.github-card a h1 {
+    color: white;
+    width: 100%;
+    height: 100%;
+}
