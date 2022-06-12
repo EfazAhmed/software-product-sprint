@@ -85,11 +85,30 @@ body::-webkit-scrollbar {
     font-weight: bold;
 }
 
+.fact-button {
+    margin-top: 50px;
+    margin-bottom: 40px;
+    width: 300px;
+    height: 50px;
+    background-color: #4285F4;
+    color: white;
+    font-family: 'IBM Plex Sans';
+    font-weight: bold;
+    font-size: 20px;
+    border: None;
+}
+#fact-container {
+    font-family: 'IBM Plex Sans';
+    font-size: 20px;
+    font-weight: bold;
+    color: #4285F4;
+}
+
 #profile-img {
     border-radius: 50%;
     border: solid 0px #4285F4;
     width: 250px;
-    margin-top: 75px;
+    margin-top: 55px;
     margin-bottom: 30px;
     box-shadow:0px 0px 0px 10px #4285F4 inset;
     transition: 0.2s;

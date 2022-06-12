@@ -28,12 +28,17 @@ function addRandomQuote() {
   quoteContainer.innerText = quote;
 }
 
-async function showHelloWorld() {
-    console.log("hello")
-    const responseFromServer = await fetch('/hello');
-    const textFromResponse = await responseFromServer.text();
+async function showFact() {
+    const responseFromServer = await fetch('/fact');
+    let response = await responseFromServer.json();
 
-    const helloContainer = document.getElementById('hello-container');
-    helloContainer.innerText = textFromResponse;
+    const currentFact = document.getElementById('fact-container').innerText;
+    const factContainer = document.getElementById('fact-container');
+
+    let filtered = response.filter(e => e !== currentFact)
+    const idx = Math.floor(Math.random() * filtered.length);
+    const funFact = filtered[idx]
+
+    factContainer.innerText = funFact;
 }
 

@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@700&display=swap" rel="stylesheet">
     <script src="script.js"></script>
   </head>
-  <body onload="showHelloWorld()">
+  <body>
     <div class="header">
         <a id="journey" href="#journey-section">
             <h1>Journey</h1>
@@ -26,9 +26,11 @@
         </a>
     </div>
 
-    <p id="hello-container"></p>
 
     <div id="content">
+
+        <button class="fact-button" onclick="showFact()">😊 Fun Fact Generator 😊</button>        
+        <p id="fact-container"></p>
 
         <div id="introduction-section">
             <img src="images/headshot.jpg" id="profile-img">
