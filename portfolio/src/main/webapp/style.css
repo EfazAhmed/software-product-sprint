@@ -274,3 +274,32 @@ body::-webkit-scrollbar {
     width: 100%;
     height: 100%;
 }
+
+#question-form {
+    padding-top: 40px;
+    background-color: #D3D3D3;
+}
+
+#question-form p{
+    font-size: 20px;
+    color: #4285F4;
+}
+
+#question-form textarea{
+    width:300px;
+    height:15px;
+    margin-bottom: 5px;
+}
+
+#question-form #submit-button {
+    margin-top:10px;
+    margin-bottom: 40px;
+    width: 250px;
+    height: 30px;
+    background-color: #4285F4;
+    color: white;
+    font-family: 'IBM Plex Sans';
+    font-weight: bold;
+    font-size: 15px;
+    border: None;
+}

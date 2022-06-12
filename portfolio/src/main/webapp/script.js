@@ -41,4 +41,3 @@ async function showFact() {
 
     factContainer.innerText = funFact;
 }
-
