@@ -8,6 +8,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@700&display=swap" rel="stylesheet">
     <script src="script.js"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
+      defer
+    ></script>
   </head>
   <body>
     <div class="header">
@@ -43,27 +47,38 @@
                 <h2>My Journey in Becoming a Software Engineer</h2>
             </div>
 
-            <h3>Beginning of my Journey</h3>
+            <div class="flex-container">
+                <div class="left">
+                    <h3>Beginning of my Journey</h3>
 
-            <p>I am a Software Engineer. But, my interests didn't always revolve around Software or programming. 
-                Back in 2019, I've always wanted to become a Math Professor. Since Math was my favorite subject at the time, 
-                I'd always assumed that my career would be correlated to the field of Mathematics. It wasn't until the year of
-                2020, where I took AP CS Java, that sparked my interests in Computer Science. However, 2020 was also the year 
-                when the COVID-19 pandemic intially took place. This was a turning point in 
-                my career because learning become fully digitalized. After completing AP CS Java, it took it into my own hands
-                to teach myself Python for the goal of improving my literacy in programming with respect to DSA and Data Science.</p>
-            <h3>From High School to University</h3>
-            <p>In transition to becoming a full-time University student, I've picked up a lot of skills using many online resources. 
-                But, the most valuable skill that I've learned was, ironically, how to learn. Learning is a skill that I've worked on
-                greatly, and allowed me to be blessed with many opportunities regarding Software Engineering early in my career. This 
-                involves being the Director of SWE at Baruch AIS, an iOS Technical Program Manager at CodePath, and even participating
-                as a Google SPS Participant.
-            </p>
-            <h3>My Future</h3>
-            <p>My aspirations are to become a Googler, while learning extensively about data science. Although I have a lot of enjoyment
-                with creating web applications and software, I see myself working as a Data Scientist that creates innovative solutions
-                to solve complex problems.
-            </p>
+                    <p>I am a Software Engineer. But, my interests didn't always revolve around Software or programming. 
+                        Back in 2019, I've always wanted to become a Math Professor. Since Math was my favorite subject at the time, 
+                        I'd always assumed that my career would be correlated to the field of Mathematics. It wasn't until the year of
+                        2020, where I took AP CS Java, that sparked my interests in Computer Science. However, 2020 was also the year 
+                        when the COVID-19 pandemic intially took place. This was a turning point in 
+                        my career because learning become fully digitalized. After completing AP CS Java, it took it into my own hands
+                        to teach myself Python for the goal of improving my literacy in programming with respect to DSA and Data Science.</p>
+                    <h3>From High School to University</h3>
+                    <p>In transition to becoming a full-time University student, I've picked up a lot of skills using many online resources. 
+                        But, the most valuable skill that I've learned was, ironically, how to learn. Learning is a skill that I've worked on
+                        greatly, and allowed me to be blessed with many opportunities regarding Software Engineering early in my career. This 
+                        involves being the Director of SWE at Baruch AIS, an iOS Technical Program Manager at CodePath, and even participating
+                        as a Google SPS Participant.
+                    </p>
+                    <h3>My Future</h3>
+                    <p>My aspirations are to become a Googler, while learning extensively about data science. Although I have a lot of enjoyment
+                        with creating web applications and software, I see myself working as a Data Scientist that creates innovative solutions
+                        to solve complex problems.
+                    </p>
+                </div>
+                <div class="right">
+                    <div id="map"></div>
+                    <script
+                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCliA4O2vZdIahPt2KdYu-3xFiPyJ9zIAA&callback=initMap&v=weekly"
+                    defer
+                    ></script>
+                </div>
+            </div>
         </div>
         <div id="projects-section">
             <div class="projects-header">
@@ -128,7 +143,6 @@
             <br/>
             <input id="submit-button" value="Submit Your Question" type="submit" />
         </form>
-
     </div>
   </body>
 </html>

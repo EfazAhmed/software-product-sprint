@@ -15,6 +15,7 @@
 /**
  * Adds a random quote to the page.
  */
+ 
 function addRandomQuote() {
   const quotes =
       ['Time is Greater than Money.', 'Sometimes, a truce is the most important part of the war.', 
@@ -41,3 +42,48 @@ async function showFact() {
 
     factContainer.innerText = funFact;
 }
+
+let map;
+const baruchCoordinates = { lat:40.7404, lng:-73.9832 };
+const townsendCoordinates = { lat:40.7350, lng:-73.8213 };
+const googleCoordinates = { lat: 37.7897, lng: -122.3901 };
+
+function initMap() {
+    map = new google.maps.Map(document.getElementById("map"), {
+    center: baruchCoordinates,
+    zoom: 10,
+    });
+  
+    const college = new google.maps.Marker({
+        position: baruchCoordinates,
+        map: map,
+        title: 'University',
+        label: {
+            text: 'University',
+            fontWeight: 'bold',
+        },
+    });
+
+    const highSchool = new google.maps.Marker({
+        position: townsendCoordinates,
+        map: map,
+        title: 'High School',
+        label: {
+            text: 'High School',
+            fontWeight: 'bold',
+        },
+    });
+
+    const dreamJob = new google.maps.Marker({
+        position: googleCoordinates,
+        map: map,
+        title: 'Google',
+        label: {
+            text: 'Dream Job',
+            fontWeight: 'bold',
+        },
+    });
+}
+
+
+
