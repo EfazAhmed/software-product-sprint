@@ -4,58 +4,145 @@
     <meta charset="UTF-8">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@700&display=swap" rel="stylesheet">
     <script src="script.js"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
+      defer
+    ></script>
   </head>
   <body>
+    <div class="header">
+        <a id="journey" href="#journey-section">
+            <h1>Journey</h1>
+        </a>
+        <h1 id="name">Efaz Ahmed</h1>
+        <a id="projects" href="#projects-section">
+            <h1>Projects</h1>
+        </a>
+        <a id="experience" href="#experience-section">
+            <h1>Experience</h1>
+        </a>
+        <a id="socials" href="#socials-section">
+            <h1>Socials</h1>
+        </a>
+    </div>
+
+
     <div id="content">
-      <h1>Efaz's Portfolio</h1>
-      <p>This is my portfolio.</p>
-      <img src="images/headshot.jpg">
-      <p>My name is Efaz Ahmed and I am a rising junior at Baruch College, NYC. My major is Data Analytics and my minor is Computer Science. I love to create Web Applications and software that involves Data Science.</p>
-      <p>Click <a href="/hello">here</a> to see content created by server code.</p>
-      <p>Click here to get a random message:</p>
-      <button onclick="addRandomQuote()">Hello</button>
-      <div id="quote-container"></div>
 
-      <h2>My Journey in Becoming a Software Engineer</h2>
-      <h3>Beginning of my Journey</h3>
-      <p>I am a Software Engineer. But, my interests didn't always revolve around Software or programming. 
-          Back in 2019, I've always wanted to become a Math Professor. Since Math was my favorite subject at the time, 
-          I'd always assumed that my career would be correlated to the field of Mathematics. It wasn't until the year of
-          2020, where I took AP CS Java, that sparked my interests in Computer Science. However, 2020 was also the year 
-          when the COVID-19 pandemic intially took place. This was a turning point in 
-          my career because learning become fully digitalized. After completing AP CS Java, it took it into my own hands
-          to teach myself Python for the goal of improving my literacy in programming with respect to DSA and Data Science.</p>
-      <h3>From High School to University</h3>
-      <p>In transition to becoming a full-time University student, I've picked up a lot of skills using many online resources. 
-          But, the most valuable skill that I've learned was, ironically, how to learn. Learning is a skill that I've worked on
-          greatly, and allowed me to be blessed with many opportunities regarding Software Engineering early in my career. This 
-          involves being the Director of SWE at Baruch AIS, an iOS Technical Program Manager at CodePath, and even participating
-          as a Google SPS Participant.
-      </p>
-      <h3>My Future</h3>
-      <p>My aspirations are to become a Googler, while learning extensively about data science. Although I have a lot of enjoyment
-          with creating web applications and software, I see myself working as a Data Scientist that creates innovative solutions
-          to solve complex problems.
-      </p>
+        <button class="fact-button" onclick="showFact()">😊 Fun Fact Generator 😊</button>        
+        <p id="fact-container"></p>
 
-      <h2>Projects</h2>
-      <h3>BobaRun</h3>
-      <p>Created a web application game using p5.js for the SG Game Jam 2022. The objective of the game is to
-         deliver as many drinks as possible without losing all 3 of your lives.</p>
-      <h3>TikTalk</h3>
-      <p>Created an Expo/React-Native Application that displays the most popularized TikTok sounds, creators, and has the 
-          capability to identify a TikTok sound based on the user's audio input.
-      </p>
-      <h3>TechDeals</h3>
-      <p>Created a Discord bot that allows users to effortlessly locate varieties of optimal and affordable hardware devices
-          such as computer hardware and accessories.
-      </p>
-      <h3>Capture the King</h3>
-      <p>Created a virtual chess variant where the objective of the game is to capture the enemy's king without being
-          notified of a checkmate before time runs out.
-      </p>
- 
+        <div id="introduction-section">
+            <img src="images/headshot.jpg" id="profile-img">
+             <p id="introduction-message">My name is Efaz Ahmed and I am a rising junior at Baruch College, NYC. My major is Data Analytics and my minor is Computer Science. I love to create Web Applications and software that involves Data Science.</p>
+        </div>
+
+        <div id="journey-section">
+
+            <div class="journey-header">
+                <h2>My Journey in Becoming a Software Engineer</h2>
+            </div>
+
+            <div class="flex-container">
+                <div class="left">
+                    <h3>Beginning of my Journey</h3>
+
+                    <p>I am a Software Engineer. But, my interests didn't always revolve around Software or programming. 
+                        Back in 2019, I've always wanted to become a Math Professor. Since Math was my favorite subject at the time, 
+                        I'd always assumed that my career would be correlated to the field of Mathematics. It wasn't until the year of
+                        2020, where I took AP CS Java, that sparked my interests in Computer Science. However, 2020 was also the year 
+                        when the COVID-19 pandemic intially took place. This was a turning point in 
+                        my career because learning become fully digitalized. After completing AP CS Java, it took it into my own hands
+                        to teach myself Python for the goal of improving my literacy in programming with respect to DSA and Data Science.</p>
+                    <h3>From High School to University</h3>
+                    <p>In transition to becoming a full-time University student, I've picked up a lot of skills using many online resources. 
+                        But, the most valuable skill that I've learned was, ironically, how to learn. Learning is a skill that I've worked on
+                        greatly, and allowed me to be blessed with many opportunities regarding Software Engineering early in my career. This 
+                        involves being the Director of SWE at Baruch AIS, an iOS Technical Program Manager at CodePath, and even participating
+                        as a Google SPS Participant.
+                    </p>
+                    <h3>My Future</h3>
+                    <p>My aspirations are to become a Googler, while learning extensively about data science. Although I have a lot of enjoyment
+                        with creating web applications and software, I see myself working as a Data Scientist that creates innovative solutions
+                        to solve complex problems.
+                    </p>
+                </div>
+                <div class="right">
+                    <div id="map"></div>
+                    <script
+                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCliA4O2vZdIahPt2KdYu-3xFiPyJ9zIAA&callback=initMap&v=weekly"
+                    defer
+                    ></script>
+                </div>
+            </div>
+        </div>
+        <div id="projects-section">
+            <div class="projects-header">
+                <h2>Projects</h2>
+            </div>
+
+            <div class="projects-container">
+                <div class="project-card">
+                    <h1 class="project-title">BobaRun</h1>
+                    <p class="project-description">Created a web application game using p5.js for the SG Game Jam 2022. 
+                        The objective of the game is to deliver as many drinks as possible without losing all 3 of your lives.</p>
+                     </p>
+                </div>
+                <div class="project-card">
+                    <h1 class="project-title">TikTalk</h1>
+                    <p class="project-description">Created an Expo/React-Native Application that displays the most popularized TikTok sounds, creators, and has the 
+                        capability to identify a TikTok sound based on the user's audio input.
+                     </p>
+                </div>
+                <div class="project-card">
+                    <h1 class="project-title">TechDeals</h1>
+                    <p class="project-description">Created a Discord bot that allows users to effortlessly locate varieties of optimal and affordable hardware devices
+                        such as computer hardware and accessories.</p>
+                </div>
+                <div class="project-card">
+                    <h1 class="project-title">Capture the King</h1>
+                    <p class="project-description">Created a virtual chess variant where the objective of the game is to capture the enemy's king without being
+                        notified of a checkmate before time runs out.</p>
+                    </p>
+                </div>
+            </div>
+            
+        </div>
+
+        <div id="socials-section">
+            <div class="socials-header">
+                <h2>Socials</h2>
+            </div>
+            <div class="socials-container">
+                <div class="linkedin-card">
+                    <a href="https://www.linkedin.com/in/eahmed2024/">
+                        <h1>LinkedIn</h1>
+                    </a>
+                </div>
+                <div class="github-card">
+                    <a href="https://github.com/EfazAhmed">
+                        <h1>GitHub</h1>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <form id="question-form" action="/form-handler" method="POST">
+            <p>What else would you like to know about me?</p>
+            <textarea name="first-name-input" placeholder="First Name"></textarea>
+            <br/>
+            <textarea name="last-name-input" placeholder="Last Name"></textarea>
+            <br/>
+            <textarea name="email-input" placeholder="Email"></textarea>
+            <br/>
+            <textarea name="question-input" placeholder="Enter your question"></textarea>
+            <br/>
+            <input id="submit-button" value="Submit Your Question" type="submit" />
+        </form>
     </div>
   </body>
 </html>
